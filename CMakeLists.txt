@@ -42,7 +42,7 @@ function(GET_PG_CONFIG var)
   if(NOT ${var})
     execute_process(
       COMMAND ${PG_CONFIG} ${ARGN}
-      OUTPUT_VARIABLE _temp
+    OUTPUT_VARIABLE _temp
       OUTPUT_STRIP_TRAILING_WHITESPACE)
   endif()
 
