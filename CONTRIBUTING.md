@@ -95,7 +95,7 @@ our [Style Guide](docs/StyleGuide.md).
       request, either mention them (preferably by GitHub name) in the PR's
       body or [assign them as a reviewer](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
-    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions)
+    * To check the build status of the repository and identify any test failures, navigate to [Github Actions](https://github.com/timescale/timescaledb/actions)
 
     * Address feedback by amending your commit(s). If your change contains
       multiple commits, address each piece of feedback by amending that
@@ -117,7 +117,7 @@ open a pull request**.
 If you are running locally:
 ```bash
 # Use Debug build mode for full battery of tests
-./bootstrap
+make bootstrap
 cd build && make
 cd build && make installcheck
 ```
