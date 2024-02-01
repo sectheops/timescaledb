@@ -64,8 +64,7 @@ configure_file("version.config" "version.config" COPYONLY)
 file(READ version.config VERSION_CONFIG)
 
 if(VERSION_CONFIG
-   MATCHES
-   "(^|.*[^a-z])version[\t ]*=[\t ]*([0-9]+\\.[0-9]+\\.*[0-9]*)(-([a-z]+[0-9]*|dev))?.*")
+   MATCHES "(^|.*[^a-z])version[\t ]*=[\t ]*([0-9]+\\.[0-9]+\\.*[0-9]*)(-([a-z]+[0-9]*|dev))?.*")
    if(CMAKE_MATCH_2 STREQUAL "2.13.1")
       set(UPDATE_FROM_VERSION "2.13.1")
    else()
