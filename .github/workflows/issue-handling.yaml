@@ -154,7 +154,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.ORG_AUTOMATION_TOKEN }}
 
       - name: Check if organization member
-        uses: tspascoal/get-user-teams-membership@v2
+        uses: tspascoal/get-user-teams-membership@v3
         id: checkUserMember
         with:
          username: ${{ github.actor }}
