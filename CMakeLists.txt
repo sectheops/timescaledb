@@ -587,7 +587,7 @@ endif()
 # with OpenSSL, Postgres must also have OpenSSL enabled.
 check_symbol_exists(USE_OPENSSL ${PG_INCLUDEDIR}/pg_config.h PG_USE_OPENSSL)
 
-if(USE_OPENSSL AND (NOT PG_USE_OPENSSL))
+if(NOT (${PG_VERSION_MAJOR} EQUAL 13) AND (${PG_VERSION_MAJOR} LESS 16)) AND (NOT PG_USE_OPENSSL))
   message(
     FATAL_ERROR
       "PostgreSQL was built without OpenSSL support, which TimescaleDB needs for full compatibility. Please rebuild PostgreSQL using `--with-openssl` or if you want to continue without OpenSSL, re-run bootstrap with `-DUSE_OPENSSL=0`"
