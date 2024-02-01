@@ -1,6 +1,9 @@
 import unittest
 
 
+from <module_name> import <class_name>
+
+
 class TestFixGitHubActions(unittest.TestCase):
     def test_case_1(self):
         # Test case to fix failing action 1
