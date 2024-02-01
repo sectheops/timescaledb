@@ -18,7 +18,7 @@ if [ "$(docker ps -q -f name=${CONTAINER_NAME} 2>/dev/null | wc -l)" == "0" ]; t
     echo "Creating container ${CONTAINER_NAME}"
     docker rm ${CONTAINER_NAME} 2>/dev/null
     # Run a Postgres container
-    docker run -u postgres -d --name ${CONTAINER_NAME} -v ${BASE_DIR}:/src postgres:${PG_IMAGE_TAG}
+    docker run -u postgres -d --name ${CONTAINER_NAME} -v ${BASE_DIR}:/src postgres:${PG_VERSION}-alpine
     # Install build dependencies
     docker exec -u root -it ${CONTAINER_NAME} /bin/bash -c "apk add --no-cache --virtual .build-deps coreutils dpkg-dev gcc libc-dev make util-linux-dev diffutils cmake bison flex && mkdir -p /build/debug"
 fi
