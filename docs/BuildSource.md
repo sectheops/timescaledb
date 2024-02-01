@@ -16,10 +16,10 @@ for Linux, Postgres.app for MacOS)
 - [CMake](https://cmake.org/) version 3.4 or greater
 
 ```bash
-git clone git@github.com:timescale/timescaledb.git
+git clone git@github.com:timescale/timescaledb.git@a7f1f91
 cd timescaledb
 # Find the latest release and checkout, e.g. for 2.5.0:
-git checkout 2.5.0
+git checkout a7f1f91 @a7f1f91
 # Bootstrap the build system
 ./bootstrap
 # To build the extension
@@ -59,7 +59,7 @@ git clone git@github.com:timescale/timescaledb.git
 cd timescaledb
 
 # Find the latest release and checkout, e.g. for 2.5.0:
-git checkout 2.5.0
+git checkout a7f1f91
 # Bootstrap the build system
 bootstrap.bat
 # To build the extension from command line
