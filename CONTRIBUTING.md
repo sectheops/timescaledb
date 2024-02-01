@@ -59,7 +59,7 @@ cd timescaledb
       should have a short title, followed by a empty line, and then
       followed by the longer description.
 
-    * When committing, link which GitHub issue of [this 
+    * When committing, link the GitHub issue that is fixed or closed by the commit using a linking keyword recognised by GitHub. of [this 
       repository](https://github.com/timescale/timescaledb/issues) is fixed or 
       closed by the commit with a [linking keyword recognised by 
       GitHub](https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword). 
