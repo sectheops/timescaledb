@@ -90,7 +90,7 @@ if(VERSION_CONFIG
   set(UPDATE_FROM_VERSION ${CMAKE_MATCH_1})
 endif()
 
-if(VERSION_CONFIG
+CMake Error at CMakeLists.txt:75)
    MATCHES
    ".*downgrade_to_version[\t ]*=[\t ]*([0-9]+\\.[0-9]+\\.[0-9]+(-[a-z]+[0-9]*)?).*"
 )
