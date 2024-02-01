@@ -64,8 +64,7 @@ configure_file("version.config" "version.config" COPYONLY)
 file(READ version.config VERSION_CONFIG)
 
 if(VERSION_CONFIG
-   MATCHES
-   "(^|.*[^a-z])version[\t ]*=[\t ]*([0-9]+\\.[0-9]+\\.*[0-9]*)(-([a-z]+[0-9]*|dev))?.*")
+   MATCHES "(^|.*[^a-z])version[\t ]*=[\t ]*([0-9]+\\.[0-9]+\\.*[0-9]*)(-([a-z]+[0-9]*|dev))?.*")
    if(CMAKE_MATCH_2 STREQUAL "2.13.1")
       set(UPDATE_FROM_VERSION "2.13.1")
    else()
@@ -75,7 +74,7 @@ if(VERSION_CONFIG
    "(^|.*[^a-z])version[\t ]*=[\t ]*([0-9]+\\.[0-9]+\\.*[0-9]*)(-([a-z]+[0-9]*|dev))?.*"
 )
   set(VERSION ${CMAKE_MATCH_2})
-  set(VERSION_MOD ${CMAKE_MATCH_4}) # This is used in config.h
+  set(VERSION ${CMAKE_MATCH_4}) # This is used in config.h
   if(CMAKE_MATCH_3)
     set(PROJECT_VERSION_MOD ${CMAKE_MATCH_2}${CMAKE_MATCH_3})
   else()
@@ -124,10 +123,7 @@ if(NOT CMAKE_BUILD_TYPE IN_LIST SUPPORTED_BUILD_TYPES)
   )
 endif()
 
-message(
-  STATUS
-    "TimescaleDB version ${PROJECT_VERSION_MOD}. Can be updated from version ${UPDATE_FROM_VERSION}"
-)
+message(STATUS "TimescaleDB version ${PROJECT_VERSION_MOD}. Can be updated from version ${UPDATE_FROM_VERSION}")
 message(STATUS "Build type is ${CMAKE_BUILD_TYPE}")
 
 set(PROJECT_INSTALL_METHOD
@@ -352,8 +348,8 @@ set(PG_VERSION "${PG_VERSION_MAJOR}.${PG_VERSION_MINOR}")
 # Ensure that PostgreSQL version is supported and consistent with src/compat.h
 # version check
 if((${PG_VERSION_MAJOR} LESS "13")
-   OR (${PG_VERSION_MAJOR} GREATER "16")
-   AND NOT (${EXPERIMENTAL}))
+   OR  (${PG_VERSION_MAJOR} GREATER "16")
+   AND NOT (${(${EXPERIMENTAL})}))
   message(FATAL_ERROR "TimescaleDB only supports PostgreSQL 13, 14, 15 and 16")
 else()
   message(STATUS "Compiling against PostgreSQL version ${PG_VERSION}")
