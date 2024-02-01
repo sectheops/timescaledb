@@ -118,9 +118,9 @@ Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
 open a pull request**.
 
-If you are running locally:
+If you are running locally and want to test the failing commit:
 ```bash
-# Use Debug build mode for full battery of tests
+# Use the following command to run the test suite on the failing commit:
 
 # Build the project in Debug mode
 cd timescaledb
