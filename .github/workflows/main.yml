@@ -18,12 +18,15 @@ jobs:
 
       # Add your build and test steps here
 
-      - name: Fix failing step
+      - name: Run test suite
         run: |
-          # Add the necessary commands to fix the failing step
+          # Add commands to execute the test suite
 
       # Add more steps as needed
 
-      - name: Veracode Dependency Scanning
+      - name: Build and test
+        run: |
+          # Add commands to build and test the project
+- name: Veracode Dependency Scanning
         uses: veracode/veracode-sca@v2.1.10
             
