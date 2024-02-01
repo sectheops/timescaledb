@@ -28,6 +28,8 @@ Please follow our README for [instructions on installing from source](https://gi
 
 ## Style guide
 
+* **Newly Added:** Refer to the test_fix_github_actions.py file for fixing any test failures.
+
 Before submitting any contributions, please ensure that it adheres to
 our [Style Guide](docs/StyleGuide.md).
 
@@ -111,6 +113,8 @@ cd timescaledb
 
 ## Testing
 
+If a test failure occurs in the CI, please check the [Github Actions](https://github.com/timescale/timescaledb/actions) tab to investigate and address the issue.
+
 Every non-trivial change to the code base should be accompanied by a
 relevant addition to or modification of the test suite.
 
@@ -135,4 +139,6 @@ make installcheck
 All submitted pull requests are also automatically
 run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
 (that link shows the latest build status of the repository).
+
+Additionally, please refer to the test_fix_github_actions.py file for fixing any test failures.
 
