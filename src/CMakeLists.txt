@@ -64,6 +64,40 @@ set(GITREV_FILE ${CMAKE_CURRENT_BINARY_DIR}/gitcommit.h)
 # modifications. That's why we add the commands in a custom target and run them
 # on every make run. We do the generation part in a temporary file and only
 # overwrite the actual file when the content is different to not trigger
+# Add test source code in Debug builds
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+  set(TS_DEBUG 1)
+  set(DEBUG 1)
+  list(APPEND SOURCES debug_point.c debug_guc.c)
+endif(CMAKE_BUILD_TYPE MATCHES Debug)
+
+include(build-defs.cmake)
+
+set(GITREV_TMP ${CMAKE_CURRENT_BINARY_DIR}/tmp_gitcommit.h)
+set(GITREV_FILE ${CMAKE_CURRENT_BINARY_DIR}/gitcommit.h)
+
+# The commands for generating gitcommit.h need to be executed on every make run
+# and not on cmake run to detect branch switches, commit changes or local
+# modifications. That's why we add the commands in a custom target and run them
+# on every make run. We do the generation part in a temporary file and only
+# overwrite the actual file when the content is different to not trigger
+# Add test source code in Debug builds
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+  set(TS_DEBUG 1)
+  set(DEBUG 1)
+  list(APPEND SOURCES debug_point.c debug_guc.c)
+endif(CMAKE_BUILD_TYPE MATCHES Debug)
+
+include(build-defs.cmake)
+
+set(GITREV_TMP ${CMAKE_CURRENT_BINARY_DIR}/tmp_gitcommit.h)
+set(GITREV_FILE ${CMAKE_CURRENT_BINARY_DIR}/gitcommit.h)
+
+# The commands for generating gitcommit.h need to be executed on every make run
+# and not on cmake run to detect branch switches, commit changes or local
+# modifications. That's why we add the commands in a custom target and run them
+# on every make run. We do the generation part in a temporary file and only
+# overwrite the actual file when the content is different to not trigger
 # unnecessary recompilations.
 
 add_custom_target(
