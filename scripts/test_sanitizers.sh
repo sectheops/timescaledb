@@ -102,5 +102,5 @@ echo "Testing"
 #
 # IGNORE some test since they fail under ASAN.
 docker exec -i -u postgres -w /tsdb_build/timescaledb/build timescaledb-san /bin/bash <<EOF
-make -k regresscheck regresscheck-t IGNORES='bgw_db_scheduler bgw_db_scheduler_fixed bgw_launcher cluster-11 continuous_aggs_ddl-11'
+make -k regresscheck regresscheck-t IGNORES='bgw_db_scheduler bgw_db_scheduler_fixed bgw_launcher cluster-12 continuous_aggs_ddl-12'
 EOF
