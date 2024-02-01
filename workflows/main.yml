@@ -1,0 +1,48 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up PostgreSQL
+        uses: timescale/setup-postgres@v1
+        with:
+          postgres-version: 13
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential
+
+      - name: Build and test
+        run: |
+          make
+          make test
+
+      - name: Deploy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying..."
+          # Add deployment steps here
+
+      - name: Notify success
+        if: always()
+        run: |
+          echo "Workflow completed successfully"
+
+      - name: Notify failure
+        if: failure()
+        run: |
+          echo "Workflow failed"
