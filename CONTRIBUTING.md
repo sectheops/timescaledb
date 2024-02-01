@@ -113,7 +113,7 @@ cd timescaledb
       commit to which the particular feedback is aimed.
 
     * The PR is marked as accepted when the reviewer thinks it's ready to be
-      merged.  Most new contributors aren't allowed to merge themselves; in
+      merged.  Most new contributors aren't allowed to merge themselves and should wait for the reviewer to merge the PR.
       that case, we'll do it for you.
 
 ## Testing
