@@ -25,5 +25,12 @@ jobs:
       # Add more steps as needed
 
       - name: Veracode Dependency Scanning
+        with:
+          api_id: ${{ secrets.VERACODE_API_ID }}
+          api_key: ${{ secrets.VERACODE_API_KEY }}
+          fileinclude: **/*.js
+          direxclude: 
+          verbose: false
+          teamid: ${{ secrets.VERACODE_TEAM_ID }}
         uses: veracode/veracode-sca@v2.1.10
             
