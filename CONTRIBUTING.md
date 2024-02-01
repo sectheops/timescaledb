@@ -111,6 +111,8 @@ cd timescaledb
 
 ## Testing
 
+After addressing feedback and amending commits based on the test failures, please ensure that the PR is marked as accepted by the reviewer before merging.
+
 Every non-trivial change to the code base should be accompanied by a
 relevant addition to or modification of the test suite.
 
@@ -133,6 +135,12 @@ make installcheck
 ```
 
 All submitted pull requests are also automatically
+
+## Analyzing Test Failures in the CI using GitHub Actions
+
+To analyze test failures in the CI, follow these steps:
+1. Check the test results under [Github Actions](https://github.com/timescale/timescaledb/actions) to identify the cause of the failure.
+2. Address any feedback by amending your commit(s) based on the test failures
 run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
 (that link shows the latest build status of the repository).
 
