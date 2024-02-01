@@ -129,7 +129,7 @@ make
 cd ..
 ./bootstrap -DCMAKE_BUILD_TYPE=Debug
 cd build && make
-make installcheck
+make installcheck\n\n# Investigate and address any test failures:\n# - Check the build logs for error messages\n# - Inspect the relevant test logs for failure details\n# - Fix the issues and rerun the test suite to ensure all tests pass successfully before opening a pull request
 ```
 
 All submitted pull requests are also automatically
