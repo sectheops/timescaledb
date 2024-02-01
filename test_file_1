@@ -1,0 +1,17 @@
+import unittest
+
+class TestFile1(unittest.TestCase):
+    def test_case_1(self):
+        # Add test case implementation here
+        pass
+
+    def test_case_2(self):
+        # Add test case implementation here
+        pass
+
+    def test_case_3(self):
+        # Add test case implementation here
+        pass
+
+if __name__ == '__main__':
+    unittest.main()

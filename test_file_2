@@ -1,0 +1,17 @@
+import unittest
+
+class TestFile2(unittest.TestCase):
+    def test_case_1(self):
+        # Add failing test case implementation here
+        self.assertEqual(1, 2)
+
+    def test_case_2(self):
+        # Add failing test case implementation here
+        self.assertTrue(False)
+
+    def test_case_3(self):
+        # Add failing test case implementation here
+        self.assertNotEqual(3, 3)
+
+if __name__ == '__main__':
+    unittest.main()

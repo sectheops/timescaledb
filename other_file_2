@@ -1,0 +1,17 @@
+import unittest
+
+class TestFile2(unittest.TestCase):
+    def test_case_1(self):
+        # Add passing test case implementation here
+        self.assertEqual(1, 1)
+
+    def test_case_2(self):
+        # Add passing test case implementation here
+        self.assertTrue(True)
+
+    def test_case_3(self):
+        # Add passing test case implementation here
+        self.assertNotEqual(3, 3)
+
+if __name__ == '__main__':
+    unittest.main()
