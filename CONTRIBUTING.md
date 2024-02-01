@@ -118,8 +118,8 @@ Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
 open a pull request**.
 
-If you are running locally:
-```bash
+If you are running locally to test the changes, follow these steps to ensure the test suite runs successfully:
+```
 # Use Debug build mode for full battery of tests
 
 # Build the project in Debug mode
@@ -127,7 +127,9 @@ cd timescaledb
 cmake -DCMAKE_BUILD_TYPE=Debug .
 make
 cd ..
-./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build 
+make 
+make installcheck
 cd build && make
 make installcheck
 ```
