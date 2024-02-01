@@ -17,7 +17,9 @@ class TestFixGitHubActions(unittest.TestCase):
         # Test case to fix failing action 3
         # Implement the necessary logic and assertions here
 
-    # Add more test cases as needed
+    def test_case_4(self):
+        # Test case to fix failing action 4
+        # Implement the necessary logic and assertions here
 
 if __name__ == '__main__':
     unittest.main()
