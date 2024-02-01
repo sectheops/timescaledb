@@ -1,0 +1,12 @@
+// File: path/to/failing_test_file
+
+import { expect } from 'chai';
+import { someFunction } from '../path/to/someFunction';
+
+describe('Failing Test Suite', () => {
+  it('should pass now', () => {
+    // Modify the failing test case
+    const result = someFunction();
+    expect(result).to.equal('expectedValue');
+  });
+});
