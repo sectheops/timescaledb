@@ -99,7 +99,7 @@ cd timescaledb
       request, either mention them (preferably by GitHub name) in the PR's
       body or [assign them as a reviewer](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
-    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions)
+    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions) for commit ffe2cb8.
 
     * Address feedback by amending your commit(s). If your change contains
       multiple commits, address each piece of feedback by amending that
@@ -119,6 +119,8 @@ or changes) passes successfully on your local machine **before you
 open a pull request**.
 
 If you are running locally:
+
+# Update: If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions) for commit ffe2cb8.
 ```bash
 # Use Debug build mode for full battery of tests
 
