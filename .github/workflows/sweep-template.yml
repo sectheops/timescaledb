@@ -1,0 +1,19 @@
+name: Sweep
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Add necessary steps here to fix the failing GitHub Actions
+
+      - name: Run sweep
+        run: |
+          # Run the sweep command here
