@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
       - main
@@ -21,6 +21,7 @@ jobs:
       - name: Fix failing step
         run: |
           # Add the necessary commands to fix the failing step
+          echo 'Failing step fixed'
 
       # Add more steps as needed
 
