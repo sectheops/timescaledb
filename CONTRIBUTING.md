@@ -118,21 +118,21 @@ Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
 open a pull request**.
 
-If you are running locally:
+If you are running locally to fix failing GitHub Actions: 
 ```bash
-# Use Debug build mode for full battery of tests
+# Use Debug build mode to fix failing GitHub Actions and for a full battery of tests, and to fix failing GitHub Actions
 
-# Build the project in Debug mode
+# Build the project in Debug mode to fix failing GitHub Actions
 cd timescaledb
 cmake -DCMAKE_BUILD_TYPE=Debug .
 make
 cd ..
-./bootstrap -DCMAKE_BUILD_TYPE=Debug
+./bootstrap --prefix=/usr/local -DCMAKE_BUILD_TYPE=Debug
 cd build && make
 make installcheck
 ```
 
-All submitted pull requests are also automatically
-run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
+Once the changes are complete, all submitted pull requests are also automatically
+run against our test suite via [GitHub Actions](https://docs.github.com/en/actions)
 (that link shows the latest build status of the repository).
 
