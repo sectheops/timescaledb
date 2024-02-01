@@ -114,7 +114,7 @@ open a pull request**.
 
 If you are running locally:
 ```bash
-# Use Debug build mode for full battery of tests
+# Use the following commands to build and run the test suite using the Debug build mode. Make sure to reference the relevant test files to be executed.
 ./bootstrap -DCMAKE_BUILD_TYPE=Debug
 cd build && make
 make installcheck
