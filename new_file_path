@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Add your build and test steps here
+
+      - name: Fix failing step
+        run: |
+          # Add the necessary commands to fix the failing step
+          echo 'Failing step fixed'
+
+      # Add more steps as needed
+
+      - name: Veracode Dependency Scanning
+        uses: veracode/veracode-sca@v2.1.10
