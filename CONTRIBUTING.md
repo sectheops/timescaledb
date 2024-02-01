@@ -99,7 +99,7 @@ cd timescaledb
       request, either mention them (preferably by GitHub name) in the PR's
       body or [assign them as a reviewer](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
-    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions)
+    * If there is a test failure in the CI, check the failing GitHub Actions under [Github Actions](https://github.com/timescale/timescaledb/actions).
 
     * Address feedback by amending your commit(s). If your change contains
       multiple commits, address each piece of feedback by amending that
@@ -132,7 +132,7 @@ cd build && make
 make installcheck
 ```
 
-All submitted pull requests are also automatically
+All submitted pull requests are also automatically automatically
 run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
 (that link shows the latest build status of the repository).
 
