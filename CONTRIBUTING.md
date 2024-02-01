@@ -28,6 +28,14 @@ Please follow our README for [instructions on installing from source](https://gi
 
 ## Style guide
 
+### Identifying and Addressing Failing Tests
+
+Before submitting any contributions, please ensure that you follow the guidelines below to address failing tests and write new tests to cover the failing scenarios:
+
+1. Check the status of the test suite on your local machine to identify any failing tests.
+2. If any failing tests are identified, write new tests to cover the failing scenarios.
+3. Ensure that the full test suite, including your test additions or changes, passes successfully before opening a pull request.
+
 Before submitting any contributions, please ensure that it adheres to
 our [Style Guide](docs/StyleGuide.md).
 
@@ -69,7 +77,7 @@ cd timescaledb
       This will be recognized by GitHub. It will close the corresponding issue 
       and place a hyperlink under the number.
 
-* Push your changes to an upstream branch:
+* Push your changes to an upstream branch and address any failing tests in the CI: 
 
     * Make sure that each commit in the pull request will represent a
       logical change to the code, will compile, and will pass tests.
@@ -102,7 +110,7 @@ cd timescaledb
     * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions)
 
     * Address feedback by amending your commit(s). If your change contains
-      multiple commits, address each piece of feedback by amending that
+      multiple commits, address each piece of feedback by amending that commit to address the failing tests in the CI.
       commit to which the particular feedback is aimed.
 
     * The PR is marked as accepted when the reviewer thinks it's ready to be
@@ -132,7 +140,11 @@ cd build && make
 make installcheck
 ```
 
-All submitted pull requests are also automatically
+All submitted pull requests are also automatically tested in the CI via [Github Actions](https://github.com/timescale/timescaledb/actions) to identify failing tests and failing scenarios.
+
+### Identifying Failing Tests and Writing New Tests
+
+Before opening a pull request, check the status of the test suite on your local machine to identify any failing tests. If any failing tests are identified, write new tests to cover the failing scenarios. Ensure that the full test suite, including your test additions or changes, passed successfully before opening a pull request.
 run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
 (that link shows the latest build status of the repository).
 
