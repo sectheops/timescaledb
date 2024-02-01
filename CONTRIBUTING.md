@@ -23,6 +23,8 @@ contributions.
 
 Please follow our README for [instructions on installing from source](https://github.com/timescale/timescaledb/blob/main/README.md#option-3---from-source).
 
+Ensure that you have the necessary dependencies installed and configured before building TimescaleDB.
+
 ## Style guide
 
 Before submitting any contributions, please ensure that it adheres to
@@ -115,9 +117,9 @@ open a pull request**.
 If you are running locally:
 ```bash
 # Use Debug build mode for full battery of tests
-./bootstrap -DCMAKE_BUILD_TYPE=Debug
+./bootstrap
 cd build && make
-make installcheck
+cd build && make installcheck
 ```
 
 All submitted pull requests are also automatically
