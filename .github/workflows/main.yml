@@ -21,6 +21,10 @@ jobs:
       - name: Fix failing step
         run: |
           # Add the necessary commands to fix the failing step
+          echo Fixing the failing step
+          # Add the necessary commands to address the specific error logs
+          echo Addressing specific error logs
+          # Add the necessary commands to fix the failing step
 
       # Add more steps as needed
 
