@@ -111,8 +111,9 @@ cd timescaledb
 
 ## Testing
 
-Every non-trivial change to the code base should be accompanied by a
-relevant addition to or modification of the test suite.
+It is crucial that every non-trivial change to the code base is accompanied by a
+relevant addition to or modification of the test suite. It is important to run the
+full test suite locally before opening a pull request.
 
 Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
@@ -129,6 +130,8 @@ make
 cd ..
 ./bootstrap -DCMAKE_BUILD_TYPE=Debug
 cd build && make
+
+# Run the test suite on the specific commit
 make installcheck
 ```
 

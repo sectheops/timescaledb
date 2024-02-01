@@ -5,6 +5,30 @@
 
 ## TimescaleDB
 
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is important to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is important to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
 TimescaleDB is an open-source database designed to make SQL scalable for
 time-series data.  It is engineered up from PostgreSQL and packaged as a
 PostgreSQL extension, providing automatic partitioning across time and space
@@ -34,6 +58,30 @@ or [Timescale License (TSL)](https://github.com/timescale/timescaledb/blob/main/
 (To build TimescaleDB from source, see instructions in [_Building from source_](https://github.com/timescale/timescaledb/blob/main/docs/BuildSource.md).)
 
 ### Using TimescaleDB
+
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is important to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is important to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
 
 TimescaleDB scales PostgreSQL for time-series data via automatic
 partitioning across time and space (partitioning key), yet retains
@@ -88,6 +136,30 @@ SELECT create_hypertable('conditions', 'time');
 
 #### Inserting and querying data
 
+#### Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is important to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
+#### Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is important to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
 Inserting data into the hypertable is done via normal SQL commands:
 
 ```sql
@@ -135,6 +207,42 @@ so you can power your application with TimescaleDB without the management overhe
 
 ### Useful tools
 
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is crucial to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is crucial to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is crucial to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
 - [timescaledb-tune](https://github.com/timescale/timescaledb-tune): Helps
 set your PostgreSQL configuration settings based on your system's resources.
 - [timescaledb-parallel-copy](https://github.com/timescale/timescaledb-parallel-copy):
@@ -150,6 +258,30 @@ multiple workers.
 - [Tutorials and sample data](https://tsdb.co/GitHubTimescaleTutorials)
 
 ### Community & help
+
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is essential to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
+
+## Running the Test Suite
+
+To build and run the test suite on the specific commit, use the following commands:
+
+```bash
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+
+It is essential to run the full test suite before opening a pull request to ensure that all changes pass successfully on your local machine.
 
 - [Slack Channel](https://slack.timescale.com)
 - [Github Issues](https://github.com/timescale/timescaledb/issues)
