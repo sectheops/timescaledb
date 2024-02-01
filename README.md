@@ -88,6 +88,16 @@ SELECT create_hypertable('conditions', 'time');
 
 #### Inserting and querying data
 
+### Troubleshooting and Fixing Test Failures
+
+If the GitHub Actions workflow fails, follow these steps to troubleshoot and fix the issue:
+1. Check the error logs to understand the nature of the failure.
+2. Review the changes made in the code and the related GitHub Actions.
+3. Check for any recent dependency updates that could have caused the failure.
+4. If the issue is related to the PostgreSQL setup, ensure that the configuration and environment variables are correct.
+5. Make sure that the correct dependencies are being installed and used during the workflow.
+6. If the failure persists, consult with the development team to review and address the issue.
+
 Inserting data into the hypertable is done via normal SQL commands:
 
 ```sql
