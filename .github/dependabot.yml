@@ -9,7 +9,4 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-
-  - name: Veracode Dependency Scanning
-    uses: veracode/veracode-sca@v2.1.10
             
