@@ -116,19 +116,21 @@ relevant addition to or modification of the test suite.
 
 Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
-open a pull request**.
+open a pull request**. If you are running locally, follow the commands below to build and run the test suite in Debug mode:
 
 If you are running locally:
 ```bash
 # Use Debug build mode for full battery of tests
 
-# Build the project in Debug mode
 cd timescaledb
 cmake -DCMAKE_BUILD_TYPE=Debug .
 make
-cd ..
+
+# Bootstrap the build
 ./bootstrap -DCMAKE_BUILD_TYPE=Debug
 cd build && make
+
+# Run the test suite
 make installcheck
 ```
 
