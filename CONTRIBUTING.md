@@ -33,7 +33,6 @@ our [Style Guide](docs/StyleGuide.md).
 
 cd timescaledb
 # Add the build/ directory to the repository
-
 ## Code review workflow
 
 * Sign the [Contributor License Agreement](https://cla-assistant.io/timescale/timescaledb) (CLA) if you're a new contributor.
