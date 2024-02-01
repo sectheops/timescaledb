@@ -6,6 +6,7 @@ name: pgspot
     branches:
       - main
       - prerelease_test
+      - develop
 
 jobs:
   pgspot:
@@ -14,7 +15,7 @@ jobs:
       # time_bucket with offset is intentional without explicit search_path to allow for inlining
       # policy_compression, policy_compression_execute, cagg_migrate_execute_plan and cagg_migrate
       # do not have explicit search_path because this would prevent them doing transaction control
-      PGSPOT_OPTS: --proc-without-search-path
+      PGSPOT_OPTS: --proc-with-search-path
           'extschema.time_bucket(bucket_width interval,ts timestamp,"offset" interval)'
         --proc-without-search-path 'extschema.time_bucket(bucket_width interval,ts timestamptz,"offset" interval)'
         --proc-without-search-path 'extschema.time_bucket(bucket_width interval,ts date,"offset" interval)'
@@ -75,7 +76,7 @@ jobs:
           build/sql/timescaledb--${version}--${downgrade_to}.sql
 
         # The next pgspot execution tests the installation script by itself
-        pgspot ${{ env.PGSPOT_OPTS }} build/sql/timescaledb--${version}.sql
+        pgspot ${{ env.PGSPOT_OPTS }} -f build/sql/timescaledb--${version}.sql
         # The next pgspot execution tests the update script to the latest version
         # we prepend the installation script here so pgspot can correctly keep track of created objects
         pgspot ${{ env.PGSPOT_OPTS }} -a build/sql/timescaledb--${downgrade_to}.sql \
