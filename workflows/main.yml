@@ -1,0 +1,43 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PostgreSQL
+        uses: timescale/setup-postgres@v1
+        with:
+          postgres-version: 13
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential
+
+      - name: Build and test
+        run: |
+          make
+          make test
+
+      - name: Publish artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-results
+
+      - name: Deploy
+        uses: some-deployment-action@v1
+        with:
+          environment: production
