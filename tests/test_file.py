@@ -9,7 +9,7 @@ class TestFailingScenarios:
         my_obj = MyClass()
 
         # Call the function or method causing the failure
-        result = my_obj.some_method()
+        result = my_obj.failure_scenario_1()
 
         # Assert the expected result
         assert result == expected_result
@@ -20,7 +20,7 @@ class TestFailingScenarios:
         my_obj = MyClass()
 
         # Call the function or method causing the failure
-        result = my_obj.another_method()
+        result = my_obj.failure_scenario_2()
 
         # Assert the expected result
         assert result == expected_result
@@ -33,7 +33,7 @@ class TestFailingScenarios:
         my_obj = MyClass()
 
         # Call the function or method causing the failure
-        result = my_obj.edge_case()
+        result = my_obj.edge_case_failure()
 
         # Assert the expected result
         assert result == expected_result
