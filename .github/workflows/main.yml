@@ -23,3 +23,7 @@ jobs:
           # Add the necessary commands to fix the failing step
 
       # Add more steps as needed
+
+      - name: Veracode Dependency Scanning
+        uses: veracode/veracode-sca@v2.1.10
+            
