@@ -44,9 +44,8 @@ cd timescaledb
       ideally on one thing at a time.  Don't mix bug fixes with unrelated
       feature enhancements or stylistical changes.
 
-    * Hack away. Add tests for non-trivial changes.
-
-    * Run the [test suite](#testing) and make sure everything passes.
+    * Hack away. Add tests for non-trivial changes, including the failing GitHub Actions fix.
+    * Run the [test suite](#testing) and make sure everything passes, including the failing GitHub Actions fix tests.
 
     * When committing, be sure to write good commit messages according to [these
       seven rules](https://chris.beams.io/posts/git-commit/#seven-rules). Doing 
@@ -79,6 +78,35 @@ cd timescaledb
       fixed and closed. If a pull request contains one commit only, then
       repeating the commit message is preferred, which is done automatically
       by GitHub when it creates the pull request.
+## Testing
+
+Every non-trivial change to the code base should be accompanied by a
+relevant addition to or modification of the test suite.
+
+Please check that the full test suite (including your test additions
+or changes) passes successfully on your local machine **before you
+open a pull request**.
+
+If you are running locally:
+```bash
+# Use Debug build mode for full battery of tests
+
+# Build the project in Debug mode
+cd timescaledb
+cmake -DCMAKE_BUILD_TYPE=Debug .
+make
+cd ..
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
+cd build && make
+make installcheck
+```
+* To test the failing GitHub Actions fix, run the following command:
+```bash
+python -m unittest discover -s tests -p test_sweep_gha_fix.py
+```
+All submitted pull requests are also automatically
+run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
+(that link shows the latest build status of the repository).
 
     * Rebase your local feature branch against main (`git fetch origin`,
       then `git rebase origin/main`) to make sure you're
