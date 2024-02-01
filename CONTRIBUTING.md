@@ -14,6 +14,9 @@ begin discussion on the GitHub issues page. This is the best place to
 discuss your proposed improvement (and its implementation) with the core
 development team.
 
+cd timescaledb
+# Add the build/ directory to the repository
+
 Before we accept any code contributions, Timescale contributors need to
 sign the [Contributor License Agreement](https://cla-assistant.io/timescale/timescaledb) (CLA). By signing a CLA, we can
 ensure that the community is free and confident in its ability to use your
@@ -27,6 +30,9 @@ Please follow our README for [instructions on installing from source](https://gi
 
 Before submitting any contributions, please ensure that it adheres to
 our [Style Guide](docs/StyleGuide.md).
+
+cd timescaledb
+# Add the build/ directory to the repository
 
 ## Code review workflow
 
@@ -115,6 +121,12 @@ open a pull request**.
 If you are running locally:
 ```bash
 # Use Debug build mode for full battery of tests
+
+# Build the project in Debug mode
+cd timescaledb
+cmake -DCMAKE_BUILD_TYPE=Debug .
+make
+cd ..
 ./bootstrap -DCMAKE_BUILD_TYPE=Debug
 cd build && make
 make installcheck
