@@ -16,7 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Add your build and test steps here
+                - name: Run the failing GitHub Actions fix tests
+            run: |
+              # Add commands to run the failing GitHub Actions fix tests
+              python -m unittest discover -s tests -p test_sweep_gha_fix.py
 
       - name: Fix failing step
         run: |
