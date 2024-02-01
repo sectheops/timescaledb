@@ -1,0 +1,26 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Add necessary steps to set up the environment and dependencies
+
+      - name: Run tests
+        run: |
+          # Add commands to run the tests
+          # Make sure to address any specific failures mentioned in the error logs
+
+      # Add any additional steps or actions as needed
