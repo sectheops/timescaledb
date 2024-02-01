@@ -21,6 +21,8 @@ jobs:
       - name: Fix failing step
         run: |
           # Add the necessary commands to fix the failing step
+          echo "Fixing failing step..."
+          # Add commands to fix the failing step here
 
       # Add more steps as needed
 
