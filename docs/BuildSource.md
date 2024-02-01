@@ -26,6 +26,7 @@ git checkout 2.5.0
 cd build && make
 # To install
 make install
+make installcheck
 # To run the test suite
 make installcheck
 make install
