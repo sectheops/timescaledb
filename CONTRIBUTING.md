@@ -80,9 +80,9 @@ cd timescaledb
       repeating the commit message is preferred, which is done automatically
       by GitHub when it creates the pull request.
 
-    * Rebase your local feature branch against main (`git fetch origin`,
-      then `git rebase origin/main`) to make sure you're
-      submitting your changes on top of the newest version of our code.
+    * Rebase your local feature branch against main (`git fetch origin`, then `git rebase origin/main`) to make sure you're submitting your changes on top of the newest version of our code.
+
+    * When finalizing your PR (i.e., it has been approved for merging), aim for the fewest number of commits that make sense. That is, squash any "fix up" commits into the commit they fix rather than keep them separate. Each commit should represent a
 
     * When finalizing your PR (i.e., it has been approved for merging),
       aim for the fewest number of commits that
@@ -99,7 +99,7 @@ cd timescaledb
       request, either mention them (preferably by GitHub name) in the PR's
       body or [assign them as a reviewer](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
-    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions)
+    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions) and troubleshoot according to the logs provided. For more details, refer to the GitHub Actions page.
 
     * Address feedback by amending your commit(s). If your change contains
       multiple commits, address each piece of feedback by amending that
