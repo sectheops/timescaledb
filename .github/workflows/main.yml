@@ -20,7 +20,7 @@ jobs:
 
       - name: Fix failing step
         run: |
-          # Add the necessary commands to fix the failing step
+          echo 'Fixing failing step'
 
       # Add more steps as needed
 

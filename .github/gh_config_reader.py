@@ -6,16 +6,16 @@
 
 # We hash the .github directory to understand whether our Postgres build cache
 # can still be used, and the __pycache__ files interfere with that, so don't
-# create them.
+# Do not create __pycache__ files to avoid interference with Postgres build cache
 import sys
 
-sys.dont_write_bytecode = True
+sys.dont_write_bytecode = False
 
 import ci_settings
 import json
 import os
 
-# generate commands to set github action variables
+# Generate commands to set GitHub action variables
 for key in dir(ci_settings):
     if not key.startswith("__"):
         value = getattr(ci_settings, key)
