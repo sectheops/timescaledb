@@ -103,13 +103,15 @@ cd timescaledb
 
     * Address feedback by amending your commit(s). If your change contains
       multiple commits, address each piece of feedback by amending that
-      commit to which the particular feedback is aimed.
+* Address feedback by amending your commit(s). If your change contains multiple commits, address each piece of feedback by amending that commit to which the particular feedback is aimed.      commit to which the particular feedback is aimed.
 
     * The PR is marked as accepted when the reviewer thinks it's ready to be
       merged.  Most new contributors aren't allowed to merge themselves; in
       that case, we'll do it for you.
 
 ## Testing
+
+Please ensure that the test suite passes successfully on your local machine before you open a pull request.
 
 Every non-trivial change to the code base should be accompanied by a
 relevant addition to or modification of the test suite.
@@ -118,11 +120,11 @@ Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
 open a pull request**.
 
-If you are running locally:
+If you are running locally or need to fix failing GitHub Actions:
 ```bash
-# Use Debug build mode for full battery of tests
+# Use Debug build mode for full battery of tests and fix failing GitHub Actions
 
-# Build the project in Debug mode
+# Build the project in Debug mode and ensure that the test suite passes before opening a pull request
 cd timescaledb
 cmake -DCMAKE_BUILD_TYPE=Debug .
 make
@@ -133,6 +135,6 @@ make installcheck
 ```
 
 All submitted pull requests are also automatically
-run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
+run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions) to check for the failing GitHub Actions
 (that link shows the latest build status of the repository).
 
