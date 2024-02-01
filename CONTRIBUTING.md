@@ -118,8 +118,7 @@ Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
 open a pull request**.
 
-If you are running locally:
-```bash
+If you are running locally, execute the following commands to run the test suite:
 # Use Debug build mode for full battery of tests
 
 # Build the project in Debug mode
@@ -130,7 +129,6 @@ cd ..
 ./bootstrap -DCMAKE_BUILD_TYPE=Debug
 cd build && make
 make installcheck
-```
 
 All submitted pull requests are also automatically
 run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
