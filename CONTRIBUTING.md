@@ -66,8 +66,12 @@ cd timescaledb
       For example, if the commit fixes bug 123, add a line at the end of the 
       commit message with  `Fixes #123`, if the commit implements feature 
       request 321, add a line at the end of the commit message `Closes #321`.
-      This will be recognized by GitHub. It will close the corresponding issue 
+      This will be recognized by GitHub and will close the corresponding issue 
       and place a hyperlink under the number.
+    
+    * Address feedback by amending your commit(s). If your change contains
+      multiple commits, address each piece of feedback by amending that
+      commit to which the particular feedback is aimed.
 
 * Push your changes to an upstream branch:
 
@@ -79,6 +83,9 @@ cd timescaledb
       fixed and closed. If a pull request contains one commit only, then
       repeating the commit message is preferred, which is done automatically
       by GitHub when it creates the pull request.
+    * Address feedback by amending your commit(s). If your change contains
+      multiple commits, address each piece of feedback by amending that
+      commit to which the particular feedback is aimed.
 
     * Rebase your local feature branch against main (`git fetch origin`,
       then `git rebase origin/main`) to make sure you're
@@ -99,14 +106,14 @@ cd timescaledb
       request, either mention them (preferably by GitHub name) in the PR's
       body or [assign them as a reviewer](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
-    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions)
+    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions) to view the failing tests(https://github.com/timescale/timescaledb/actions)
 
     * Address feedback by amending your commit(s). If your change contains
       multiple commits, address each piece of feedback by amending that
       commit to which the particular feedback is aimed.
 
     * The PR is marked as accepted when the reviewer thinks it's ready to be
-      merged.  Most new contributors aren't allowed to merge themselves; in
+      merged.  Most new contributors aren't allowed to merge themselves and should wait for the reviewer to merge the PR.
       that case, we'll do it for you.
 
 ## Testing
