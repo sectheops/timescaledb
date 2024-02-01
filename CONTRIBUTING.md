@@ -124,7 +124,7 @@ If you are running locally:
 
 # Build the project in Debug mode
 cd timescaledb
-cmake -DCMAKE_BUILD_TYPE=Debug .
+cmake -DCMAKE_BUILD_TYPE=Debug -DTIMESCALE_GITHUB_ACTIONS_RUN=ON .
 make
 cd ..
 ./bootstrap -DCMAKE_BUILD_TYPE=Debug
@@ -134,5 +134,6 @@ make installcheck
 
 All submitted pull requests are also automatically
 run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
+If the GitHub Actions fail, check the error logs and ensure the necessary dependencies are installed on the GitHub runner environment.
 (that link shows the latest build status of the repository).
 
