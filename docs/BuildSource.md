@@ -19,7 +19,7 @@ for Linux, Postgres.app for MacOS)
 git clone git@github.com:timescale/timescaledb.git@a7f1f91
 cd timescaledb
 # Find the latest release and checkout, e.g. for 2.5.0:
-git checkout a7f1f91
+git checkout a7f1f91 @a7f1f91
 # Bootstrap the build system
 ./bootstrap
 # To build the extension
