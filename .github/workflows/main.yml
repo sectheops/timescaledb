@@ -19,7 +19,9 @@ jobs:
       # Add your build and test steps here
 
       - name: Fix failing step
-        run: |
+        run: |\
+          echo 'Fixing failing step' && \
+          # Add the necessary commands to fix the failing step
           # Add the necessary commands to fix the failing step
 
       # Add more steps as needed
