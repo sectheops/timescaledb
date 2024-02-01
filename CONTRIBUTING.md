@@ -118,7 +118,7 @@ Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
 open a pull request**.
 
-If you are running locally:
+If you are running locally, ensure that the full test suite passes successfully on your local machine before opening a pull request. This can be done by executing the following commands:
 ```bash
 # Use Debug build mode for full battery of tests
 
