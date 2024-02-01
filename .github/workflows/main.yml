@@ -18,7 +18,7 @@ jobs:
 
       # Add your build and test steps here
 
-      - name: Fix failing step
+      - name: Fix failing step: Add necessary commands to fix the failing step
         run: |
           # Add the necessary commands to fix the failing step
 
