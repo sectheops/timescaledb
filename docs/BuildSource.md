@@ -26,6 +26,9 @@ git checkout 2.5.0
 cd build && make
 # To install
 make install
+# To run the test suite
+make installcheck
+make install
 ```
 
 Note, if you have multiple versions of PostgreSQL installed you can specify the path to `pg_config`
@@ -70,3 +73,5 @@ cmake --build ./build --config Release --target install
 # Alternatively, build in Visual Studio via its built-in support for
 # CMake or by opening the generated build/timescaledb.sln solution file.
 ```
+# To run the test suite
+make installcheck
