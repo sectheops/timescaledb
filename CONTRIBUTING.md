@@ -93,6 +93,7 @@ cd timescaledb
     * Push your commit to your upstream feature branch: `git push -u <yourfork> my-feature-branch`
 
 * Create and manage pull request:
+    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions).
 
     * [Create a pull request using GitHub](https://help.github.com/articles/creating-a-pull-request).
       If you know a core developer well suited to reviewing your pull

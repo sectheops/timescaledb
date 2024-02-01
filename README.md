@@ -150,6 +150,8 @@ multiple workers.
 - [Tutorials and sample data](https://tsdb.co/GitHubTimescaleTutorials)
 
 ### Community & help
+- [GitHub Actions for CI test failures](https://github.com/timescale/timescaledb/actions)
+- [GitHub Actions for CI test failures](https://github.com/timescale/timescaledb/actions)
 
 - [Slack Channel](https://slack.timescale.com)
 - [Github Issues](https://github.com/timescale/timescaledb/issues)
