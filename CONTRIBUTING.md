@@ -14,6 +14,9 @@ begin discussion on the GitHub issues page. This is the best place to
 discuss your proposed improvement (and its implementation) with the core
 development team.
 
+cd timescaledb
+# Add the build/ directory to the repository
+
 Before we accept any code contributions, Timescale contributors need to
 sign the [Contributor License Agreement](https://cla-assistant.io/timescale/timescaledb) (CLA). By signing a CLA, we can
 ensure that the community is free and confident in its ability to use your
@@ -23,12 +26,13 @@ contributions.
 
 Please follow our README for [instructions on installing from source](https://github.com/timescale/timescaledb/blob/main/README.md#option-3---from-source).
 
-Ensure that you have the necessary dependencies installed and configured before building TimescaleDB.
-
 ## Style guide
 
 Before submitting any contributions, please ensure that it adheres to
 our [Style Guide](docs/StyleGuide.md).
+
+cd timescaledb
+# Add the build/ directory to the repository
 
 ## Code review workflow
 
@@ -95,7 +99,7 @@ our [Style Guide](docs/StyleGuide.md).
       request, either mention them (preferably by GitHub name) in the PR's
       body or [assign them as a reviewer](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
-    * To check the build status of the repository and identify any test failures, navigate to [Github Actions](https://github.com/timescale/timescaledb/actions)
+    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions)
 
     * Address feedback by amending your commit(s). If your change contains
       multiple commits, address each piece of feedback by amending that
@@ -117,9 +121,15 @@ open a pull request**.
 If you are running locally:
 ```bash
 # Use Debug build mode for full battery of tests
-make bootstrap
+
+# Build the project in Debug mode
+cd timescaledb
+cmake -DCMAKE_BUILD_TYPE=Debug .
+make
+cd ..
+./bootstrap -DCMAKE_BUILD_TYPE=Debug
 cd build && make
-cd build && make installcheck
+make installcheck
 ```
 
 All submitted pull requests are also automatically
