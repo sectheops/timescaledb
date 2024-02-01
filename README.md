@@ -58,6 +58,9 @@ From the perspective of both use and management, TimescaleDB just
 looks and feels like PostgreSQL, and can be managed and queried as
 such.
 
+### Interpreting GitHub Actions Error Logs
+When GitHub Actions fail, it is important to review the error logs to identify the cause of the failure. Understanding common issues that cause actions to fail can help in troubleshooting. Here are a few common issues to look for: syntax errors, incorrect configurations, and missing or outdated dependencies. For further troubleshooting and assistance, consult the [GitHub Actions documentation](https://docs.github.com/en/actions) or reach out to the [TimescaleDB community forum](https://www.timescale.com/forum/) or [Timescale Support](https://tsdb.co/GitHubTimescaleSupport).
+
 #### Before you start
 
 PostgreSQL's out-of-the-box settings are typically too conservative for modern
@@ -117,6 +120,9 @@ analysis that are not present in vanilla PostgreSQL. (For example, the `time_buc
 
 TimescaleDB is available pre-packaged for several platforms (Linux, Docker, MacOS, Windows).
 More information can be found in [our documentation](https://docs.timescale.com/self-hosted/latest/install/).
+- [Troubleshooting GitHub Actions](https://docs.github.com/en/actions)
+- [TimescaleDB Community Forum](https://www.timescale.com/forum/)
+- [TimescaleDB Support](https://tsdb.co/GitHubTimescaleSupport)
 
 To build from source, see instructions
 [here](https://github.com/timescale/timescaledb/blob/main/docs/BuildSource.md).
@@ -148,6 +154,13 @@ multiple workers.
 - [Writing data](https://tsdb.co/GitHubTimescaleWriteData)
 - [Querying and data analytics](https://tsdb.co/GitHubTimescaleReadData)
 - [Tutorials and sample data](https://tsdb.co/GitHubTimescaleTutorials)
+
+### Troubleshooting GitHub Actions
+To troubleshoot failing GitHub Actions, follow these steps:
+1. Review the error logs to identify the cause of the failure.
+2. Check for common issues such as incorrect configurations, missing dependencies, or syntax errors.
+3. Consult the [GitHub Actions documentation](https://docs.github.com/en/actions) for guidance on resolving common GitHub Actions issues.
+4. Reach out to the [TimescaleDB community forum](https://www.timescale.com/forum/) or the [Timescale Support](https://tsdb.co/GitHubTimescaleSupport) for further assistance.
 
 ### Community & help
 
