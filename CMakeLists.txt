@@ -43,7 +43,7 @@ function(GET_PG_CONFIG var)
     execute_process(
       COMMAND ${PG_CONFIG} ${ARGN}
       OUTPUT_VARIABLE _temp
-      OUTPUT_STRIP_TRAILING_WHITESPACE)
+      OUTPUT_STRIP_TRAILING_WHITESPACE(
   endif()
 
   # On Windows, fields that are not recorded will be given the value "not
