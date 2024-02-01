@@ -59,7 +59,7 @@ cd timescaledb
       should have a short title, followed by a empty line, and then
       followed by the longer description.
 
-    * When committing, link which GitHub issue of [this 
+    * When committing, link the GitHub issue that is fixed or closed by the commit using a linking keyword recognised by GitHub. of [this 
       repository](https://github.com/timescale/timescaledb/issues) is fixed or 
       closed by the commit with a [linking keyword recognised by 
       GitHub](https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword). 
@@ -74,8 +74,9 @@ cd timescaledb
     * Make sure that each commit in the pull request will represent a
       logical change to the code, will compile, and will pass tests.
 
-    * Make sure that the pull request message contains all important 
-      information from the commit messages including which issues are
+    * Make sure that each commit in the pull request represents a logical change to the code, compiles, and passes tests.
+  - Ensure that the pull request message contains all important information from the commit messages, including which issues are fixed and closed. fixed and closed.
+  - Ensure that the pull request message contains all important information from the commit messages, including which issues are fixed and closed. fixed and closed.
       fixed and closed. If a pull request contains one commit only, then
       repeating the commit message is preferred, which is done automatically
       by GitHub when it creates the pull request.
@@ -86,11 +87,12 @@ cd timescaledb
 
     * When finalizing your PR (i.e., it has been approved for merging),
       aim for the fewest number of commits that
-      make sense. That is, squash any "fix up" commits into the commit they
+      make sense. That is, squash any "fix up" commits into the commit they fix
       fix rather than keep them separate. Each commit should represent a
       clean, logical change and include a descriptive commit message.
 
     * Push your commit to your upstream feature branch: `git push -u <yourfork> my-feature-branch`
+  - When finalizing the pull request, aim for the fewest number of commits that make sense.
 
 * Create and manage pull request:
 
@@ -116,7 +118,9 @@ relevant addition to or modification of the test suite.
 
 Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
-open a pull request**.
+open a pull request**
+
+After making these changes, ensure that the CONTRIBUTING.md file is committed and pushed to the repository.
 
 If you are running locally:
 ```bash
