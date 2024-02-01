@@ -111,6 +111,8 @@ cd timescaledb
 
 ## Testing
 
+If a test failure occurs in the CI, please check the [Github Actions](https://github.com/timescale/timescaledb/actions) tab to investigate and address the issue.
+
 Every non-trivial change to the code base should be accompanied by a
 relevant addition to or modification of the test suite.
 
