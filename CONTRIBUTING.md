@@ -46,7 +46,7 @@ cd timescaledb
 
     * Hack away. Add tests for non-trivial changes.
 
-    * Run the [test suite](#testing) and make sure everything passes.
+    * Run the [test suite](#testing) and make sure everything passes **before you open a pull request**.
 
     * When committing, be sure to write good commit messages according to [these
       seven rules](https://chris.beams.io/posts/git-commit/#seven-rules). Doing 
@@ -99,7 +99,7 @@ cd timescaledb
       request, either mention them (preferably by GitHub name) in the PR's
       body or [assign them as a reviewer](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users/).
 
-    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions)
+    * If you get a test failure in the CI, check them under [Github Actions](https://github.com/timescale/timescaledb/actions).
 
     * Address feedback by amending your commit(s). If your change contains
       multiple commits, address each piece of feedback by amending that
@@ -118,8 +118,7 @@ Please check that the full test suite (including your test additions
 or changes) passes successfully on your local machine **before you
 open a pull request**.
 
-If you are running locally:
-```bash
+If you are running locally, execute the following commands to run the test suite:
 # Use Debug build mode for full battery of tests
 
 # Build the project in Debug mode
@@ -130,7 +129,6 @@ cd ..
 ./bootstrap -DCMAKE_BUILD_TYPE=Debug
 cd build && make
 make installcheck
-```
 
 All submitted pull requests are also automatically
 run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
