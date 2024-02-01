@@ -123,6 +123,7 @@ If you are running locally, ensure that the full test suite passes successfully 
 # Use Debug build mode for full battery of tests
 
 # Build the project in Debug mode
+git clone git@github.com:timescale/timescaledb.git@a7f1f91
 cd timescaledb
 cmake -DCMAKE_BUILD_TYPE=Debug .
 make
