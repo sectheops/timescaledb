@@ -135,6 +135,6 @@ make installcheck
 ```
 
 All submitted pull requests are also automatically
-run against our test suite via [Github Actions](https://github.com/timescale/timescaledb/actions)
+triggers the GitHub Actions workflow for the test suite. You can check the [latest build status here](https://github.com/timescale/timescaledb/actions)
 (that link shows the latest build status of the repository).
 
