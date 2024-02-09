@@ -25,5 +25,5 @@ jobs:
       # Add more steps as needed
 
       - name: Veracode Dependency Scanning
-        uses: veracode/veracode-sca@v2.1.10
+        uses: veracode/veracode-sca@v2.1.11
             
